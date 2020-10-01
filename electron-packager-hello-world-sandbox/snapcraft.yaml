@@ -1,4 +1,4 @@
-name: electron-packager-hello-world
+name: electron-packager-hello-world-sandbox
 version: '0.1'
 summary: Hello World Electron app
 description: |
@@ -7,14 +7,20 @@ base: core18
 confinement: strict
 grade: stable
 
+plugs:
+  browser-sandbox:
+    interface: browser-support
+    allow-sandbox: true
+    
 apps:
-  electron-packager-hello-world:
-    command: electron-quick-start/electron-quick-start --no-sandbox
+  electron-packager-hello-world-with-sandbox:
+    command: electron-quick-start/electron-quick-start
     extensions: [gnome-3-34]
     plugs:
     - browser-support
     - network
     - network-bind
+    - pulseaudio
 
 parts:
   electron-quick-start:

@@ -26,8 +26,25 @@ snapcraft
 
 # Install it.
 sudo snap install *.snap --dangerous
-sudo snap connect electron-packager-hello-world:browser-sandbox
 
 # Run it.
 electron-packager-hello-world
+```
+
+# electron-packager-hello-world-sandbox
+
+Example snapping electron apps using electron-packager,
+running the with chromium sandboxing:
+
+```
+# Build it.
+cd electron-packager-hello-world-sandbox
+snapcraft
+
+# Install it.
+sudo snap install *.snap --dangerous
+sudo snap connect electron-packager-hello-world-sandbox:browser-sandbox
+
+# Run it.
+electron-packager-hello-world-sandbox
 ```
