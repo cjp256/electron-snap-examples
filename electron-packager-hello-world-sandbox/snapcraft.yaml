@@ -13,7 +13,7 @@ plugs:
     allow-sandbox: true
     
 apps:
-  electron-packager-hello-world-with-sandbox:
+  electron-packager-hello-world-sandbox:
     command: electron-quick-start/electron-quick-start
     extensions: [gnome-3-34]
     plugs:
