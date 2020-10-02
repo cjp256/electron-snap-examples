@@ -1,0 +1,11 @@
+snap:
+ confinement: classic
+ environment:
+   FOO: bar
+ summary: some summary
+ grade: devel
+ assumes: [command-chain]
+ buildPackages: [jq]
+ stagePackages: [default, jq]
+ plugs: [default, raw-usb]
+ useTemplateApp: false
